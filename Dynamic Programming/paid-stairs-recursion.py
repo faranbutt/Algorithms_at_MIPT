@@ -1,3 +1,5 @@
+from time import time
+start = time()
 def stairs_rec(n):
     if len(n)<=2:
         return n[-1]
@@ -8,3 +10,7 @@ def stairs_rec(n):
 
 n = [0,1,2,15,2,30,3]
 print(stairs_rec(n))
+
+
+end = time()
+print(f"Total Time Taken is {end-start} ")
