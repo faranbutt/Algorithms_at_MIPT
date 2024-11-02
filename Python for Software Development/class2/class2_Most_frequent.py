@@ -1,5 +1,5 @@
 import sys
-sys.stdin = open('input.txt','r')
+sys.stdin = open('../input.txt', 'r')
 grades = list(map(int,sys.stdin.readlines()))
 N = grades[0]
 most_freq_counter = 0

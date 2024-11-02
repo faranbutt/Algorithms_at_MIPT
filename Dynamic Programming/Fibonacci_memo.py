@@ -1,15 +1,14 @@
-from time import time
-memo = {0:0,1:1}
-def fib_memo(n):
-    mem = [0,1]
-    print(mem)
-    for i in range(2,n+1):
-        mem.append(mem[-2]+mem[-1])
-    return mem[-1]
-start  = time()
-a = fib_memo(40)
-print(a)
+memo  = {0:0,1:1}
+def fib(n):
+    if n<2:
+        return n
+    
+    return fib(n-1) + fib(n-2)
+    
+    
+inp =  int(input())
+fibs = [fib(i) for i in range(inp)]
+print(fibs)
 
-end = time()
-print(f'Time to execute is {end-start}')
+    
 
